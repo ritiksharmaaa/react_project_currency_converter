@@ -6,3 +6,7 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Deployment note
+
+Do not deploy the raw source `index.html` directly (it imports `/src/main.jsx`, which many static hosts serve with a non-module MIME type). Deploy the Vite build output (`dist`) instead.
